@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Comment;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class CommentFactory extends Factory
 {
@@ -22,10 +23,11 @@ class CommentFactory extends Factory
     public function definition()
     {
         return [
+            'post_id' => $this->faker->unique(2)->randomDigit,
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
-            'website' => $this->faker->website,
-            'comment' => $this->faker->comment,
+            'website' => Str::random(10).'@website',
+            'comment' => Str::random(10).'@comment',
         ];
     }
 }
