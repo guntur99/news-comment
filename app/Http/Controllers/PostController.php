@@ -20,38 +20,9 @@ class PostController extends Controller
             'a.content',
         )
         ->leftJoin('users as b', 'a.user_id', '=', 'b.id')
+        ->where('email', '!=', null)
         ->get();
-        \dump($content_post);
-
-        $user_list = \DB::table('users as a')
-        ->select(
-            'a.name',
-            'c.comment',
-        )
-        ->leftJoin('posts as b', 'a.id', '=', 'b.user_id')
-        ->leftJoin('comments as c', 'b.id', '=', 'c.post_id')
-        ->get();
-        \dump($user_list);
-
-        $user_mail = \DB::table('users')
-        ->select(
-            'email',
-        )
-        ->get();
-        \dump($user_mail);
-
-        $comment_guest = '';
-        foreach ($user_mail as $mail) {
-            $comment_guest = \DB::table('comments as a')
-            ->select(
-                'a.name',
-                'a.comment',
-            )
-            ->where('a.email', '!=', $mail->email)
-            ->get();
-
-        }
-        \dump($comment_guest);
+        // \dump($content_post);
 
 
         // $users = User::find(5)->posts()->get();
@@ -74,9 +45,10 @@ class PostController extends Controller
 
         // }
 
-
-        return view(
-            'welcome',
+        return view('news.content_post',
+        [
+            'content_post' => $content_post,
+        ]
         );
     }
 }
