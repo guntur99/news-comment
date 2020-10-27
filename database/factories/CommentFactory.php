@@ -27,7 +27,7 @@ class CommentFactory extends Factory
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
             'website' => Str::random(10).'@website',
-            'comment' => Str::random(10).'@comment',
+            'comment' => Str::random(10).' sed ut perspiciatis unde omnis iste natus error, @comment',
         ];
     }
 }
