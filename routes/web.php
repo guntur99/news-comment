@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,11 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', function () {
-    return view('news.index');
+    return view('news.content_post');
 });
 
+Route::get('/users', [UserController::class, 'index']);
 Route::get('/post', [PostController::class, 'index']);
+Route::get('/comment', [PostController::class, 'index']);
 
 

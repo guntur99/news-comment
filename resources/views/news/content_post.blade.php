@@ -9,7 +9,7 @@
                     <div class="col-md-6 text-white p-b-30">
                         <div class="media">
                             <div class="media-body m-auto">
-                                <h1 class="mt-0">Simple News Site <img src="https://twemoji.maxcdn.com/2/72x72/1f397.png"
+                                <h1 class="mt-0">Content Post <img src="https://twemoji.maxcdn.com/2/72x72/1f397.png"
                                                                       width="20" alt=""></h1>
                             </div>
                         </div>
