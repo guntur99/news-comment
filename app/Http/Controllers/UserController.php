@@ -15,6 +15,7 @@ class UserController extends Controller
         )
         ->leftJoin('posts as b', 'a.id', '=', 'b.user_id')
         ->leftJoin('comments as c', 'b.id', '=', 'c.post_id')
+        ->where('c.comment', '!=', null)
         ->get();
         // \dump($user_list);
 

@@ -16,12 +16,12 @@ class CommentController extends Controller
 
         $comment_guest = '';
         foreach ($user_mail as $mail) {
-            $comment_guest = \DB::table('comments as a')
+            $comment_guest = \DB::table('comments')
             ->select(
-                'a.name',
-                'a.comment',
+                'name',
+                'comment',
             )
-            ->where('a.email', '!=', $mail->email)
+            ->where('email', '!=', $mail->email)
             ->get();
         }
 

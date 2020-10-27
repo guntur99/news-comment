@@ -52,7 +52,7 @@
                                         <div class="row no-gutters align-items-center">
                                             <div class="media col-12 align-items-center">
                                                 <div class="avatar avatar">
-                                                    <img src="assets/img/users/user-9.jpg" alt="..."
+                                                    <img src="assets/img/users/user-5.jpg" alt="..."
                                                         class="avatar-img rounded-circle">
                                                 </div>
                                                 <div class="media-body  ml-2">

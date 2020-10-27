@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/users', [UserController::class, 'index']);
-Route::get('/post', [PostController::class, 'index']);
-Route::get('/comment', [CommentController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/comments', [CommentController::class, 'index']);
 
 
