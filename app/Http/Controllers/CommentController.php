@@ -30,7 +30,9 @@ class CommentController extends Controller
         $comment_guest = '';
         // Check if email has registered
         foreach ($user_mail as $mail) {
-            $comment_guest = Comment::where('email', '!=', $mail->email)->get();
+            $comment_guest = Comment::where('comments.email', '!=', $mail->email)
+            ->select('comments.name', 'comments.comment')
+            ->get();
         }
 
         return view('news.comment_guest',

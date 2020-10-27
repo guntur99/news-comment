@@ -13,8 +13,9 @@
                                                                       width="20" alt=""></h1>
                             </div>
                         </div>
-
                     </div>
+
+                    @include('news.menu')
                 </div>
             </div>
         </div>

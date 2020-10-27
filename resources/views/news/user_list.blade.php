@@ -12,8 +12,9 @@
                                 <h1 class="mt-0">User List</h1>
                             </div>
                         </div>
-
                     </div>
+
+                    @include('news.menu')
                 </div>
             </div>
         </div>

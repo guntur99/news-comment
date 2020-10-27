@@ -29,3 +29,5 @@
 </head>
 
 <body>
+
+@include('layouts.flash-message')

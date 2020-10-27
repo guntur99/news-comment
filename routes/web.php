@@ -20,8 +20,8 @@ Route::get('/', function () {
     return view('news.content_post');
 });
 
-Route::get('/users', [UserController::class, 'index']);
-Route::get('/posts', [PostController::class, 'index']);
-Route::get('/comments', [CommentController::class, 'index']);
+Route::get('/users', [UserController::class, 'index'])->name('users');
+Route::get('/posts', [PostController::class, 'index'])->name('posts');
+Route::get('/comments', [CommentController::class, 'index'])->name('comments');
 
 

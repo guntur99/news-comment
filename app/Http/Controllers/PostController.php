@@ -25,6 +25,7 @@ class PostController extends Controller
         // Eloquent
         $content_post = Post::where('email', '!=', null)
         ->leftJoin('users', 'posts.user_id', '=', 'users.id')
+        ->select('users.name', 'users.email', 'posts.content')
         ->get();
 
         return view('news.content_post',

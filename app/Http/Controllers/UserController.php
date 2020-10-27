@@ -21,9 +21,11 @@ class UserController extends Controller
         // ->get();
 
         // Eloquent
-        $user_list = User::where('comments.comment', '!=', null)
+        $user_list = User::where('users.email', '!=', 'comments.email')
+        ->where('comments.comment', '!=', null)
         ->leftJoin('posts', 'posts.user_id', '=', 'users.id')
         ->leftJoin('comments', 'comments.post_id', '=', 'posts.id')
+        ->select('users.name', 'comments.comment')
         ->get();
 
         return view('news.user_list',
