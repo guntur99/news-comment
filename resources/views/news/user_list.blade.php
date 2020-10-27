@@ -38,7 +38,7 @@
                         <div class="container-fluid">
                             @foreach ($user_list as $user)
 
-                                <!--single-thread-->
+                                <!--user-list-->
                                 <div class="row p-t-10 p-b-10  align-items-center border-bottom">
                                     <div class="col">
                                         @if($user->comment == null)
@@ -57,14 +57,13 @@
                                                 </div>
                                                 <div class="media-body  ml-2">
                                                     <div class=" text-truncate">{{ $user->name }}</div>
-                                                    {{-- <a href="#" class="text-muted small text-truncate">by Yryskeldi Romanov</a> --}}
                                                 </div>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <!--end single-thread-->
+                                <!--end user-list-->
                             @endforeach
 
                         </div>

@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,6 @@ Route::get('/', function () {
 
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/post', [PostController::class, 'index']);
-Route::get('/comment', [PostController::class, 'index']);
+Route::get('/comment', [CommentController::class, 'index']);
 
 
