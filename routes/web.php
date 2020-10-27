@@ -16,12 +16,8 @@ use App\Http\Controllers\CommentController;
 |
 */
 
-Route::get('/', function () {
-    return view('news.content_post');
-});
-
 Route::get('/users', [UserController::class, 'index'])->name('users');
-Route::get('/posts', [PostController::class, 'index'])->name('posts');
+Route::get('/', [PostController::class, 'index'])->name('posts');
 Route::get('/comments', [CommentController::class, 'index'])->name('comments');
 
 
