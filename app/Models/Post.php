@@ -14,4 +14,9 @@ class Post extends Model
         'slug',
         'content',
     ];
+
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
+    }
 }
